@@ -1,24 +1,22 @@
 /**
- * 托盘 tray
+ * tray
  */
-var nw = require("nw.gui");
 var Tray = function (options) {
     options = Object.assign({}, Tray.defaults, options);
     options.menuItems = options.menuItems.map(function (menuItem) {
         return Object.assign({}, Tray.menuItemDefaults, menuItem);
     });
-    alert(options.menuItems)
     var tray = new nw.Tray({
 		tooltip: options.tooltip,
 		title: options.title,
 		icon: "/res/traydefault.png"
 	});
-    //绑定左键单击事件
+
     tray.on("click",function(){
          if (typeof options.onTrayClick !== 'function') return;
 			options.onTrayClick.apply(this, arguments);
     })
-    //初始化右键菜单
+
 	var menu = new nw.Menu();    
     options.menuItems.forEach(function (menuItem) {
         menu.append(new nw.MenuItem({
@@ -30,11 +28,6 @@ var Tray = function (options) {
     });
     tray.menu= menu;
     return tray;
-    // return {
-    //     addMenuItem: function (){
-    //         //
-    //     }
-    // };
 };
 
 Tray.defaults = {

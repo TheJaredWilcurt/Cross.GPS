@@ -1,16 +1,17 @@
 ﻿try {
-    var nw = require("nw.gui");
-    var Tray =  require("./app/Tray.js");
+    nw.App.clearCache();
+    var Win = require("../app/window.js");
+    var Tray =  require("../app/Tray");    
     var tray = new Tray({
             tooltip:"跨平台应用",
             title: 'tray',
             icon: "/res/logo.png",
-            onLoad:function(){},//初始化执行的方法，如消息检测等
+            onLoad:function(){},
             onTrayClick: function () {
                 try {
-                    
-                    //var win = nw.Window.get();
-                    alert("1");
+                    alert("tray");
+                    Win.currentWin();//!!!!  error is "whoa,nw.js has crashed.relunch now?"
+                    // alert(win.title);
                 } catch (error) {
                     alert(error);
                 }              
