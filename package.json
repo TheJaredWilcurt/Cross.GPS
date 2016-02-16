@@ -1,0 +1,22 @@
+{
+  "main": "view/index.html",
+  "bg-script":"/js/global.js" ,
+  "name": "跨平台应用",
+  "license": "ISC",
+  "varsion":"0.0.1",
+  "description": "跨平台应用",
+  "window": {
+    "title":"跨平台应用",
+    "toolbar": true,
+    // "min_width": 900,
+    // "min_height": 602,
+    // "width": 900,
+    // "height": 602,
+    "icon": "res/logo.png",
+    //"frame": true,
+    "show_in_taskbar": true
+  },
+  "dependencies": {
+   // "express": "^4.13.3"
+  }
+}

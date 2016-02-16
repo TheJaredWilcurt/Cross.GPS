@@ -1,0 +1,8 @@
+<script>
+    var t = ["1","2","3"];//默认
+    var e = ["a","b","c"];//传递
+    var q = t.map(function(x){
+        return Object.assign({},e,x);
+    })
+    console.log(q);
+    </script>
