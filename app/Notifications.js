@@ -104,7 +104,7 @@ var showNativeNotification = function (icon, title, message, sound, image) {
     } catch (error) {
         console.error(error);
         if (error.message == "Cannot find module 'node-notifier'") {
-            window.alert("Can not load module 'node-notifier'.\nPlease run 'npm install'");
+            console.log("Can not load module 'node-notifier'.\nPlease run 'npm install'");
         }
         return false;
     }
@@ -141,7 +141,7 @@ var showHtmlNotification = function (icon, title, body, callback) {
     } catch (error) {
         console.error(error);
         if (error.message == "Cannot find module 'nw-notify'") {
-            window.alert("Can not load module 'nw-notify'.\nPlease run 'npm install'");
+            console.log("Can not load module 'nw-notify'.\nPlease run 'npm install'");
             return false;
         }
     }

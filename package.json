@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "author": "H Sinky",
     "description": "GPS Mapping of taxis",
-    "keywords": [ "gps mapping", "taxis" ],
+    "keywords": [ "gps mapping", "taxis", "coffee" ],
     "maintainers":[{
         "name": "Hsinky Lee",
         "email": "Hsinky@users.noreply.github.com",

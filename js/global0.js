@@ -2,32 +2,32 @@
 var gui = require("nw.gui");
 function init_tray() {
     var tray = new gui.Tray({
-        tooltip: "<h1>fsdfs</h1>",
-        title: "tray",
-        icon: "/res/logo.png",
-        click: function () {
+        'tooltip': "<h1>fsdfs</h1>",
+        'title': "tray",
+        'icon': "./res/logo.png",
+        'click': function () {
             show_mainWin();
         }
     });
     var menu = new gui.Menu();
 //设置
     menu.append(new gui.MenuItem({
-        label: "设置",
-        click: function () {
+        'label': "设置",
+        'click': function () {
             tray_setting();
         }
     }));
 //关于
     menu.append(new gui.MenuItem({
-        label: "关于",
-        click: function () {
+        'label': "关于",
+        'click': function () {
             tray_about();
         }
     }));
 //退出
     menu.append(new gui.MenuItem({
-        label: "退出",
-        click: function () {
+        'label': "退出",
+        'click': function () {
             tray_quite()
         }
     }));
@@ -40,7 +40,7 @@ function tray_quit () {
     gui.App.quit();
 }
 function tray_setting () {
-    alert("设置");
+    console.log("设置");
 }
 function tray_about () {
 }
@@ -83,7 +83,7 @@ showPopup();
 *封装tray
 */
 function openWin () {
-    alert(1);
+    console.log(1);
     var win= gui.Window.open("http://www.baidu.com");
     win.focus();
 }

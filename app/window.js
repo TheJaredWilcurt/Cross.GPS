@@ -4,10 +4,10 @@
 
 var currentWin = function () {
     try {
-        var win = nw.Window.get();
-        alert(win.title);
+        var win = gui.Window.get();
+        console.log(win.title);
     } catch (error) {
-        alert(error);
+        console.log(error);
     }
 };
 
