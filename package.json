@@ -1,22 +1,56 @@
 {
-  "main": "view/index.html",
-  "bg-script":"/js/global.js" ,
-  "name": "跨平台应用",
-  "license": "ISC",
-  "varsion":"0.0.1",
-  "description": "跨平台应用",
-  "window": {
-    "title":"跨平台应用",
-    "toolbar": true,
-    // "min_width": 900,
-    // "min_height": 602,
-    // "width": 900,
-    // "height": 602,
-    "icon": "res/logo.png",
-    //"frame": true,
-    "show_in_taskbar": true
-  },
-  "dependencies": {
-   // "express": "^4.13.3"
-  }
+    "name": "crossgps",
+    "homepage": "https://Hsinky.github.io/Cross.GPS",
+    "version": "0.0.1",
+    "author": "H Sinky",
+    "description": "GPS Mapping of taxis",
+    "keywords": [ "gps mapping", "taxis", "coffee" ],
+    "maintainers":[{
+        "name": "Hsinky Lee",
+        "email": "Hsinky@users.noreply.github.com",
+        "web": "https://github.com/Hsinky"
+    }],
+    "repository": [{
+        "type": "git",
+        "url": "git://github.com/Hsinky/Cross.GPS.git"
+    }],
+    "bugs": "https://github.com/Hsinky/Cross.GPS/issues",
+    "license": "ISC",
+    "main": "view/index.html",
+    "window": {
+        "title": "Cross.GPS",
+        "icon": "res/logo.png",
+        "toolbar": true,
+        "resizable": true,
+        "visible": true,
+        "transparent": false,
+        "width": 900,
+        "height": 550,
+        "min_width": 400,
+        "min_height": 200,
+        "max_width": 8000,
+        "max_height": 8000,
+        "position": "center",
+        "always-on-top": false,
+        "show_in_taskbar": true,
+        "fullscreen": false,
+        "frame": true,
+        "as_desktop": false
+    },
+    "nodejs": true,
+    "single-instance": true,
+    "node-main": "js/node.js",
+    "webkit": {
+        "page-cache": false,
+        "java": false,
+        "plugin": true
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "nw": "^0.12.3"
+    },
+    "scripts": {
+        "start": "nw ."
+    }
 }

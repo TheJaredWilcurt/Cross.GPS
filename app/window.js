@@ -1,12 +1,14 @@
 ﻿/**
  * Get current window
  */
-var currentWin = function(){
-  try {
-    var win = nw.Window.get();
-    alert(win.title);
-  } catch (error) {
-      alert(error);
-  }
+
+var currentWin = function () {
+    try {
+        var win = gui.Window.get();
+        console.log(win.title);
+    } catch (error) {
+        console.log(error);
+    }
 };
+
 exports.currentWin = currentWin;
