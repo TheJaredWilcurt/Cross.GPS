@@ -51,7 +51,6 @@ var tray = new Tray({
 
 /* Known good tray code */
 
-/*
 // Create a tray icon
 var tray = new gui.Tray({
     icon : './res/logo.png',
@@ -65,4 +64,3 @@ menu.append(new gui.MenuItem({
     label: 'Are you sure?'
 }));
 tray.menu = menu;
-*/
